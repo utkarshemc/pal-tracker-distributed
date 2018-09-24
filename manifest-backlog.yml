@@ -2,10 +2,10 @@ applications:
 - name: tracker-backlog
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
-  - route: backlog-pal-ub2.apps.pikes.pal.pivotal.io
+  - route: backlog-pal-ub.apps.pikes.pal.pivotal.io
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://allocations-pal-ub1.apps.pikes.pal.pivotal.io/registration
+    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-ub.apps.pikes.pal.pivotal.io/registration
   services:
   - tracker-backlog-database
