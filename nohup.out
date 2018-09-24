@@ -1,0 +1,363 @@
+Exception in thread "DisconnectableInputStream source reader" org.gradle.api.UncheckedIOException: java.io.IOException: Bad file descriptor
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:57)
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:40)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Bad file descriptor
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:96)
+	... 1 more
+:buildSrc:compileJava NO-SOURCE
+:buildSrc:compileGroovy UP-TO-DATE
+:buildSrc:processResources NO-SOURCE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:assemble UP-TO-DATE
+:buildSrc:compileTestJava NO-SOURCE
+:buildSrc:compileTestGroovy NO-SOURCE
+:buildSrc:processTestResources NO-SOURCE
+:buildSrc:testClasses UP-TO-DATE
+:buildSrc:test NO-SOURCE
+:buildSrc:check UP-TO-DATE
+:buildSrc:build UP-TO-DATE
+:components:rest-support:compileJava UP-TO-DATE
+:components:rest-support:processResources NO-SOURCE
+:components:rest-support:classes UP-TO-DATE
+:components:rest-support:jar UP-TO-DATE
+:components:users:compileJava UP-TO-DATE
+:components:users:processResources NO-SOURCE
+:components:users:classes UP-TO-DATE
+:components:users:jar UP-TO-DATE
+:components:accounts:compileJava UP-TO-DATE
+:components:accounts:processResources NO-SOURCE
+:components:accounts:classes UP-TO-DATE
+:components:accounts:jar UP-TO-DATE
+:components:projects:compileJava UP-TO-DATE
+:components:projects:processResources NO-SOURCE
+:components:projects:classes UP-TO-DATE
+:components:projects:jar UP-TO-DATE
+:applications:registration-server:compileJava UP-TO-DATE
+:applications:registration-server:processResources UP-TO-DATE
+:applications:registration-server:classes UP-TO-DATE
+:applications:registration-server:findMainClass
+:applications:registration-server:bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.7.RELEASE)
+
+2018-09-24 09:18:47.262  INFO 28784 --- [           main] io.pivotal.pal.tracker.registration.App  : Starting App on pal3-OptiPlex-7050 with PID 28784 (/home/pal-3/workspace/pal-tracker-distributed/applications/registration-server/build/classes/java/main started by pal-3 in /home/pal-3/workspace/pal-tracker-distributed/applications/registration-server)
+2018-09-24 09:18:47.264  INFO 28784 --- [           main] io.pivotal.pal.tracker.registration.App  : No active profile set, falling back to default profiles: default
+2018-09-24 09:18:47.326  INFO 28784 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@166fa74d: startup date [Mon Sep 24 09:18:47 UTC 2018]; root of context hierarchy
+2018-09-24 09:18:48.225  INFO 28784 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8083 (http)
+2018-09-24 09:18:48.233  INFO 28784 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-24 09:18:48.234  INFO 28784 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2018-09-24 09:18:48.295  INFO 28784 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-24 09:18:48.295  INFO 28784 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 971 ms
+2018-09-24 09:18:48.374  INFO 28784 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-09-24 09:18:48.377  INFO 28784 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-24 09:18:48.378  INFO 28784 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-24 09:18:48.378  INFO 28784 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-24 09:18:48.378  INFO 28784 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+2018-09-24 09:18:48.926  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@166fa74d: startup date [Mon Sep 24 09:18:47 UTC 2018]; root of context hierarchy
+2018-09-24 09:18:48.973  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/accounts],methods=[GET]}" onto public java.util.List<io.pivotal.pal.tracker.accounts.AccountInfo> io.pivotal.pal.tracker.accounts.AccountController.list(long)
+2018-09-24 09:18:48.976  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/registration],methods=[POST]}" onto public io.pivotal.pal.tracker.users.UserInfo io.pivotal.pal.tracker.accounts.RegistrationController.create(io.pivotal.pal.tracker.accounts.RegistrationForm)
+2018-09-24 09:18:48.976  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String io.pivotal.pal.tracker.restsupport.SpringDefaultController.defaultRoute()
+2018-09-24 09:18:48.978  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/projects/{projectId}],methods=[GET]}" onto public io.pivotal.pal.tracker.projects.ProjectInfo io.pivotal.pal.tracker.projects.ProjectController.get(long)
+2018-09-24 09:18:48.978  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/projects],methods=[POST]}" onto public org.springframework.http.ResponseEntity<io.pivotal.pal.tracker.projects.ProjectInfo> io.pivotal.pal.tracker.projects.ProjectController.create(io.pivotal.pal.tracker.projects.ProjectForm)
+2018-09-24 09:18:48.979  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/projects],methods=[GET]}" onto public java.util.List<io.pivotal.pal.tracker.projects.ProjectInfo> io.pivotal.pal.tracker.projects.ProjectController.list(long)
+2018-09-24 09:18:48.980  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[GET]}" onto public io.pivotal.pal.tracker.users.UserInfo io.pivotal.pal.tracker.users.UserController.show(long)
+2018-09-24 09:18:48.982  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-24 09:18:48.983  INFO 28784 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-24 09:18:49.004  INFO 28784 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:18:49.004  INFO 28784 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:18:49.027  INFO 28784 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:18:49.149  INFO 28784 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-24 09:18:49.188  INFO 28784 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8083 (http)
+2018-09-24 09:18:49.191  INFO 28784 --- [           main] io.pivotal.pal.tracker.registration.App  : Started App in 2.137 seconds (JVM running for 2.349)
+Starting a Gradle Daemon, 1 busy Daemon could not be reused, use --status for details
+Exception in thread "DisconnectableInputStream source reader" org.gradle.api.UncheckedIOException: java.io.IOException: Bad file descriptor
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:57)
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:40)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Bad file descriptor
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:96)
+	... 1 more
+:buildSrc:compileJava NO-SOURCE
+:buildSrc:compileGroovy UP-TO-DATE
+:buildSrc:processResources NO-SOURCE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:assemble UP-TO-DATE
+:buildSrc:compileTestJava NO-SOURCE
+:buildSrc:compileTestGroovy NO-SOURCE
+:buildSrc:processTestResources NO-SOURCE
+:buildSrc:testClasses UP-TO-DATE
+:buildSrc:test NO-SOURCE
+:buildSrc:check UP-TO-DATE
+:buildSrc:build UP-TO-DATE
+:components:rest-support:compileJava UP-TO-DATE
+:components:rest-support:processResources NO-SOURCE
+:components:rest-support:classes UP-TO-DATE
+:components:rest-support:jar UP-TO-DATE
+:components:allocations:compileJava UP-TO-DATE
+:components:allocations:processResources NO-SOURCE
+:components:allocations:classes UP-TO-DATE
+:components:allocations:jar UP-TO-DATE
+:applications:allocations-server:compileJava UP-TO-DATE
+:applications:allocations-server:processResources UP-TO-DATE
+:applications:allocations-server:classes UP-TO-DATE
+:applications:allocations-server:findMainClass
+:applications:allocations-server:bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.7.RELEASE)
+
+2018-09-24 09:19:52.465  INFO 28946 --- [           main] io.pivotal.pal.tracker.allocations.App   : Starting App on pal3-OptiPlex-7050 with PID 28946 (/home/pal-3/workspace/pal-tracker-distributed/applications/allocations-server/build/classes/java/main started by pal-3 in /home/pal-3/workspace/pal-tracker-distributed/applications/allocations-server)
+2018-09-24 09:19:52.467  INFO 28946 --- [           main] io.pivotal.pal.tracker.allocations.App   : No active profile set, falling back to default profiles: default
+2018-09-24 09:19:52.499  INFO 28946 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@130f889: startup date [Mon Sep 24 09:19:52 UTC 2018]; root of context hierarchy
+2018-09-24 09:19:53.363  INFO 28946 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-09-24 09:19:53.370  INFO 28946 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-24 09:19:53.371  INFO 28946 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2018-09-24 09:19:53.424  INFO 28946 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-24 09:19:53.424  INFO 28946 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 927 ms
+2018-09-24 09:19:53.503  INFO 28946 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-09-24 09:19:53.505  INFO 28946 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-24 09:19:53.506  INFO 28946 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-24 09:19:53.506  INFO 28946 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-24 09:19:53.507  INFO 28946 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+2018-09-24 09:19:54.052  INFO 28946 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@130f889: startup date [Mon Sep 24 09:19:52 UTC 2018]; root of context hierarchy
+2018-09-24 09:19:54.105  INFO 28946 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/allocations],methods=[POST]}" onto public org.springframework.http.ResponseEntity<io.pivotal.pal.tracker.allocations.AllocationInfo> io.pivotal.pal.tracker.allocations.AllocationController.create(io.pivotal.pal.tracker.allocations.AllocationForm)
+2018-09-24 09:19:54.106  INFO 28946 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/allocations],methods=[GET]}" onto public java.util.List<io.pivotal.pal.tracker.allocations.AllocationInfo> io.pivotal.pal.tracker.allocations.AllocationController.list(long)
+2018-09-24 09:19:54.106  INFO 28946 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String io.pivotal.pal.tracker.restsupport.SpringDefaultController.defaultRoute()
+2018-09-24 09:19:54.108  INFO 28946 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-24 09:19:54.108  INFO 28946 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-24 09:19:54.138  INFO 28946 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:19:54.138  INFO 28946 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:19:54.168  INFO 28946 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:19:54.305  INFO 28946 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-24 09:19:54.368  INFO 28946 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-09-24 09:19:54.372  INFO 28946 --- [           main] io.pivotal.pal.tracker.allocations.App   : Started App in 2.094 seconds (JVM running for 2.3)
+Starting a Gradle Daemon, 2 busy Daemons could not be reused, use --status for details
+Exception in thread "DisconnectableInputStream source reader" org.gradle.api.UncheckedIOException: java.io.IOException: Bad file descriptor
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:57)
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:40)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Bad file descriptor
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:96)
+	... 1 more
+:buildSrc:compileJava NO-SOURCE
+:buildSrc:compileGroovy UP-TO-DATE
+:buildSrc:processResources NO-SOURCE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:assemble UP-TO-DATE
+:buildSrc:compileTestJava NO-SOURCE
+:buildSrc:compileTestGroovy NO-SOURCE
+:buildSrc:processTestResources NO-SOURCE
+:buildSrc:testClasses UP-TO-DATE
+:buildSrc:test NO-SOURCE
+:buildSrc:check UP-TO-DATE
+:buildSrc:build UP-TO-DATE
+:components:rest-support:compileJava UP-TO-DATE
+:components:rest-support:processResources NO-SOURCE
+:components:rest-support:classes UP-TO-DATE
+:components:rest-support:jar UP-TO-DATE
+:components:backlog:compileJava UP-TO-DATE
+:components:backlog:processResources NO-SOURCE
+:components:backlog:classes UP-TO-DATE
+:components:backlog:jar UP-TO-DATE
+:applications:backlog-server:compileJava UP-TO-DATE
+:applications:backlog-server:processResources UP-TO-DATE
+:applications:backlog-server:classes UP-TO-DATE
+:applications:backlog-server:findMainClass
+:applications:backlog-server:bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.7.RELEASE)
+
+2018-09-24 09:20:30.401  INFO 29095 --- [           main] io.pivotal.pal.tracker.backlog.App       : Starting App on pal3-OptiPlex-7050 with PID 29095 (/home/pal-3/workspace/pal-tracker-distributed/applications/backlog-server/build/classes/java/main started by pal-3 in /home/pal-3/workspace/pal-tracker-distributed/applications/backlog-server)
+2018-09-24 09:20:30.405  INFO 29095 --- [           main] io.pivotal.pal.tracker.backlog.App       : No active profile set, falling back to default profiles: default
+2018-09-24 09:20:30.470  INFO 29095 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@130f889: startup date [Mon Sep 24 09:20:30 UTC 2018]; root of context hierarchy
+2018-09-24 09:20:31.352  INFO 29095 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8082 (http)
+2018-09-24 09:20:31.360  INFO 29095 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-24 09:20:31.361  INFO 29095 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2018-09-24 09:20:31.437  INFO 29095 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-24 09:20:31.437  INFO 29095 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 970 ms
+2018-09-24 09:20:31.530  INFO 29095 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-09-24 09:20:31.532  INFO 29095 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-24 09:20:31.533  INFO 29095 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-24 09:20:31.533  INFO 29095 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-24 09:20:31.533  INFO 29095 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+2018-09-24 09:20:32.137  INFO 29095 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@130f889: startup date [Mon Sep 24 09:20:30 UTC 2018]; root of context hierarchy
+2018-09-24 09:20:32.231  INFO 29095 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stories],methods=[POST]}" onto public org.springframework.http.ResponseEntity<io.pivotal.pal.tracker.backlog.StoryInfo> io.pivotal.pal.tracker.backlog.StoryController.create(io.pivotal.pal.tracker.backlog.StoryForm)
+2018-09-24 09:20:32.232  INFO 29095 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stories],methods=[GET]}" onto public java.util.List<io.pivotal.pal.tracker.backlog.StoryInfo> io.pivotal.pal.tracker.backlog.StoryController.list(long)
+2018-09-24 09:20:32.233  INFO 29095 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String io.pivotal.pal.tracker.restsupport.SpringDefaultController.defaultRoute()
+2018-09-24 09:20:32.235  INFO 29095 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-24 09:20:32.235  INFO 29095 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-24 09:20:32.263  INFO 29095 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:20:32.263  INFO 29095 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:20:32.291  INFO 29095 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:20:32.421  INFO 29095 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-24 09:20:32.479  INFO 29095 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8082 (http)
+2018-09-24 09:20:32.482  INFO 29095 --- [           main] io.pivotal.pal.tracker.backlog.App       : Started App in 2.303 seconds (JVM running for 2.562)
+Starting a Gradle Daemon, 3 busy Daemons could not be reused, use --status for details
+Exception in thread "DisconnectableInputStream source reader" org.gradle.api.UncheckedIOException: java.io.IOException: Bad file descriptor
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:57)
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:40)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Bad file descriptor
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:96)
+	... 1 more
+:buildSrc:compileJava NO-SOURCE
+:buildSrc:compileGroovy UP-TO-DATE
+:buildSrc:processResources NO-SOURCE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:assemble UP-TO-DATE
+:buildSrc:compileTestJava NO-SOURCE
+:buildSrc:compileTestGroovy NO-SOURCE
+:buildSrc:processTestResources NO-SOURCE
+:buildSrc:testClasses UP-TO-DATE
+:buildSrc:test NO-SOURCE
+:buildSrc:check UP-TO-DATE
+:buildSrc:build UP-TO-DATE
+:components:rest-support:compileJava UP-TO-DATE
+:components:rest-support:processResources NO-SOURCE
+:components:rest-support:classes UP-TO-DATE
+:components:rest-support:jar UP-TO-DATE
+:components:timesheets:compileJava UP-TO-DATE
+:components:timesheets:processResources NO-SOURCE
+:components:timesheets:classes UP-TO-DATE
+:components:timesheets:jar UP-TO-DATE
+:applications:timesheets-server:compileJava UP-TO-DATE
+:applications:timesheets-server:processResources UP-TO-DATE
+:applications:timesheets-server:classes UP-TO-DATE
+:applications:timesheets-server:findMainClass
+:applications:timesheets-server:bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.7.RELEASE)
+
+2018-09-24 09:21:23.187  INFO 29252 --- [           main] io.pivotal.pal.tracker.timesheets.App    : Starting App on pal3-OptiPlex-7050 with PID 29252 (/home/pal-3/workspace/pal-tracker-distributed/applications/timesheets-server/build/classes/java/main started by pal-3 in /home/pal-3/workspace/pal-tracker-distributed/applications/timesheets-server)
+2018-09-24 09:21:23.190  INFO 29252 --- [           main] io.pivotal.pal.tracker.timesheets.App    : No active profile set, falling back to default profiles: default
+2018-09-24 09:21:23.223  INFO 29252 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@130f889: startup date [Mon Sep 24 09:21:23 UTC 2018]; root of context hierarchy
+2018-09-24 09:21:24.076  INFO 29252 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8084 (http)
+2018-09-24 09:21:24.085  INFO 29252 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-09-24 09:21:24.086  INFO 29252 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2018-09-24 09:21:24.147  INFO 29252 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-09-24 09:21:24.147  INFO 29252 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 926 ms
+2018-09-24 09:21:24.222  INFO 29252 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-09-24 09:21:24.224  INFO 29252 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-24 09:21:24.225  INFO 29252 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-24 09:21:24.225  INFO 29252 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-24 09:21:24.225  INFO 29252 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+2018-09-24 09:21:24.764  INFO 29252 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@130f889: startup date [Mon Sep 24 09:21:23 UTC 2018]; root of context hierarchy
+2018-09-24 09:21:24.813  INFO 29252 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/time-entries],methods=[POST]}" onto public org.springframework.http.ResponseEntity<io.pivotal.pal.tracker.timesheets.TimeEntryInfo> io.pivotal.pal.tracker.timesheets.TimeEntryController.create(io.pivotal.pal.tracker.timesheets.TimeEntryForm)
+2018-09-24 09:21:24.814  INFO 29252 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/time-entries],methods=[GET]}" onto public java.util.List<io.pivotal.pal.tracker.timesheets.TimeEntryInfo> io.pivotal.pal.tracker.timesheets.TimeEntryController.list(long)
+2018-09-24 09:21:24.814  INFO 29252 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String io.pivotal.pal.tracker.restsupport.SpringDefaultController.defaultRoute()
+2018-09-24 09:21:24.816  INFO 29252 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-24 09:21:24.816  INFO 29252 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-24 09:21:24.834  INFO 29252 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:21:24.835  INFO 29252 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:21:24.858  INFO 29252 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-24 09:21:24.994  INFO 29252 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-24 09:21:25.050  INFO 29252 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8084 (http)
+2018-09-24 09:21:25.054  INFO 29252 --- [           main] io.pivotal.pal.tracker.timesheets.App    : Started App in 2.088 seconds (JVM running for 2.311)
+:applications:timesheets-server:bootRun FAILED
+:applications:backlog-server:bootRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':applications:backlog-server:bootRun'.
+> Process 'command '/usr/lib/jvm/java-8-openjdk-amd64/bin/java'' finished with non-zero exit value 137
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED in 3m 41s
+8 actionable tasks: 2 executed, 6 up-to-date
+:applications:registration-server:bootRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':applications:registration-server:bootRun'.
+> Process 'command '/usr/lib/jvm/java-8-openjdk-amd64/bin/java'' finished with non-zero exit value 137
+
+* Try:
+Run with 
+--stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED in 5m 19s
+12 actionable tasks: 2 executed, 10 up-to-date
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':applications:timesheets-server:bootRun'.
+> Process 'command '/usr/lib/jvm/java-8-openjdk-amd64/bin/java'' finished with non-zero exit value 137
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED in 2m 48s
+8 actionable tasks: 2 executed, 6 up-to-date
+:applications:allocations-server:bootRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':applications:allocations-server:bootRun'.
+> Process 'command '/usr/lib/jvm/java-8-openjdk-amd64/bin/java'' finished with non-zero exit value 137
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED in 4m 29s
+8 actionable tasks: 2 executed, 6 up-to-date
